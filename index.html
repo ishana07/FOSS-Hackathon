@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ஒழுக்கம் Quest | Thirukkural 131</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         GAME HEADER
+    =============================== -->
+
+    <header class="game-header">
+
+        <div class="brand">
+            <span class="brand-icon">🏹</span>
+            <div>
+                <h1>ஒழுக்கம் QUEST</h1>
+                <p>Thirukkural 131</p>
+            </div>
+        </div>
+
+        <div class="score-board">
+            <span>⭐</span>
+            <strong id="score">0</strong>
+            <small>XP</small>
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         MAIN GAME AREA
+    =============================== -->
+
+    <main class="game-container">
+
+        <!-- INTRO SCREEN -->
+
+        <section id="intro-screen" class="screen active">
+
+            <div class="hero-character">
+                🧑‍🎓
+            </div>
+
+            <div class="intro-content">
+
+                <span class="quest-label">
+                    ✦ YOUR QUEST BEGINS ✦
+                </span>
+
+                <h2>
+                    The Choice<br>
+                    <span>Quest</span>
+                </h2>
+
+                <p>
+                    Every day, we make choices.
+                    Some choices show who we really are.
+                </p>
+
+                <div class="kural-card">
+
+                    <span class="kural-number">
+                        குறள் 131
+                    </span>
+
+                    <p class="kural-text">
+                        ஒழுக்கம் விழுப்பந் தரலான் ஒழுக்கம்<br>
+                        உயிரினும் ஓம்பப் படும்.
+                    </p>
+
+                    <p class="kural-meaning">
+                        Good conduct gives greatness.
+                        Therefore, it should be protected
+                        even more carefully than life.
+                    </p>
+
+                </div>
+
+                <button id="start-btn" class="primary-btn">
+                    BEGIN QUEST →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             QUEST SCREEN
+        =============================== -->
+
+        <section id="quest-screen" class="screen">
+
+            <div class="quest-top">
+
+                <span id="scenario-number">
+                    CHALLENGE 01
+                </span>
+
+                <div class="progress-track">
+                    <div id="progress-bar"></div>
+                </div>
+
+            </div>
+
+
+            <div class="scenario-card">
+
+                <div class="scenario-icon" id="scenario-icon">
+                    🏫
+                </div>
+
+                <span class="scenario-category" id="scenario-category">
+                    CLASSROOM
+                </span>
+
+                <h2 id="scenario-title">
+                    A Difficult Choice
+                </h2>
+
+                <p id="scenario-description">
+                    Your friend forgot to complete their homework.
+                    The teacher asks who finished it.
+                </p>
+
+            </div>
+
+
+            <div class="choice-area">
+
+                <p class="choice-question">
+                    What will you choose?
+                </p>
+
+                <div id="choices-container">
+
+                    <!-- Choices will be inserted by JavaScript -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             RESULT SCREEN
+        =============================== -->
+
+        <section id="result-screen" class="screen">
+
+            <div class="result-icon">
+                🏆
+            </div>
+
+            <span class="quest-label">
+                QUEST COMPLETE
+            </span>
+
+            <h2>
+                Your Choices<br>
+                Define <span>You!</span>
+            </h2>
+
+            <div class="final-score-card">
+
+                <p>YOUR OZHUKKAM SCORE</p>
+
+                <strong id="final-score">
+                    0
+                </strong>
+
+                <span>XP</span>
+
+            </div>
+
+            <p id="result-message">
+                Great job! You understood the spirit
+                of Thirukkural 131.
+            </p>
+
+            <button id="restart-btn" class="primary-btn">
+                PLAY AGAIN ↻
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    =============================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
