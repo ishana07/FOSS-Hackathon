@@ -97,15 +97,12 @@ body::after {
 ========================================= */
 
 .game-header {
-
     width: 100%;
 
     padding: 22px 7%;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -115,7 +112,6 @@ body::after {
     backdrop-filter: blur(14px);
 
     position: relative;
-
     z-index: 10;
 }
 
@@ -123,16 +119,12 @@ body::after {
 /* BRAND */
 
 .brand {
-
     display: flex;
-
     align-items: center;
-
     gap: 13px;
 }
 
 .brand-icon {
-
     width: 48px;
     height: 48px;
 
@@ -157,7 +149,6 @@ body::after {
 }
 
 .brand h1 {
-
     font-size: 17px;
 
     letter-spacing: 2px;
@@ -166,7 +157,6 @@ body::after {
 }
 
 .brand p {
-
     margin-top: 3px;
 
     font-size: 11px;
@@ -182,11 +172,8 @@ body::after {
 ========================================= */
 
 .score-board {
-
     display: flex;
-
     align-items: center;
-
     gap: 7px;
 
     padding: 9px 15px;
@@ -203,14 +190,12 @@ body::after {
 }
 
 .score-board strong {
-
     font-size: 18px;
 
     color: #f6c54d;
 }
 
 .score-board small {
-
     font-size: 10px;
 
     letter-spacing: 1px;
@@ -224,7 +209,6 @@ body::after {
 ========================================= */
 
 .game-container {
-
     width: min(1100px, 90%);
 
     min-height: calc(100vh - 94px);
@@ -234,7 +218,6 @@ body::after {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 }
 
@@ -244,7 +227,6 @@ body::after {
 ========================================= */
 
 .screen {
-
     width: 100%;
 
     padding: 70px 0;
@@ -255,16 +237,13 @@ body::after {
 }
 
 .screen.active {
-
     display: flex;
 
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 }
-
 
 @keyframes screenEnter {
 
@@ -277,6 +256,7 @@ body::after {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 
@@ -285,7 +265,6 @@ body::after {
 ========================================= */
 
 #intro-screen {
-
     text-align: center;
 
     max-width: 850px;
@@ -297,7 +276,6 @@ body::after {
 /* CHARACTER */
 
 .hero-character {
-
     width: 110px;
     height: 110px;
 
@@ -325,7 +303,6 @@ body::after {
     animation: floating 3s ease-in-out infinite;
 }
 
-
 @keyframes floating {
 
     0%,
@@ -336,13 +313,13 @@ body::after {
     50% {
         transform: translateY(-10px);
     }
+
 }
 
 
 /* QUEST LABEL */
 
 .quest-label {
-
     display: inline-block;
 
     margin-bottom: 15px;
@@ -358,7 +335,6 @@ body::after {
 /* MAIN TITLE */
 
 .intro-content h2 {
-
     font-size: clamp(48px, 8vw, 86px);
 
     line-height: 0.95;
@@ -369,16 +345,13 @@ body::after {
 }
 
 .intro-content h2 span {
-
     color: #f6c54d;
 
     text-shadow:
         0 0 30px rgba(246, 197, 77, 0.25);
 }
 
-
 .intro-content > p {
-
     max-width: 540px;
 
     margin: auto;
@@ -396,7 +369,6 @@ body::after {
 ========================================= */
 
 .kural-card {
-
     max-width: 700px;
 
     margin: 35px auto;
@@ -423,7 +395,6 @@ body::after {
 }
 
 .kural-card::before {
-
     content: "❖";
 
     position: absolute;
@@ -437,7 +408,6 @@ body::after {
 }
 
 .kural-card::after {
-
     content: "❖";
 
     position: absolute;
@@ -450,9 +420,7 @@ body::after {
     font-size: 15px;
 }
 
-
 .kural-number {
-
     display: inline-block;
 
     margin-bottom: 18px;
@@ -470,9 +438,7 @@ body::after {
     background: #f6c54d;
 }
 
-
 .kural-text {
-
     font-family: Georgia, "Times New Roman", serif;
 
     font-size: clamp(19px, 3vw, 26px);
@@ -482,9 +448,7 @@ body::after {
     color: #fff6df;
 }
 
-
 .kural-meaning {
-
     margin-top: 20px;
 
     padding-top: 18px;
@@ -504,7 +468,6 @@ body::after {
 ========================================= */
 
 .primary-btn {
-
     border: none;
 
     padding: 15px 30px;
@@ -537,7 +500,6 @@ body::after {
 }
 
 .primary-btn:hover {
-
     transform: translateY(-3px);
 
     box-shadow:
@@ -545,7 +507,6 @@ body::after {
 }
 
 .primary-btn:active {
-
     transform: translateY(0);
 }
 
@@ -555,7 +516,6 @@ body::after {
 ========================================= */
 
 #quest-screen {
-
     max-width: 800px;
 
     margin: auto;
@@ -565,7 +525,6 @@ body::after {
 /* TOP */
 
 .quest-top {
-
     width: 100%;
 
     margin-bottom: 30px;
@@ -578,7 +537,6 @@ body::after {
 }
 
 #scenario-number {
-
     white-space: nowrap;
 
     font-size: 11px;
@@ -589,10 +547,11 @@ body::after {
 }
 
 
-/* PROGRESS */
+/* =========================================
+   PROGRESS
+========================================= */
 
 .progress-track {
-
     flex: 1;
 
     height: 6px;
@@ -605,7 +564,6 @@ body::after {
 }
 
 #progress-bar {
-
     width: 20%;
 
     height: 100%;
@@ -623,10 +581,261 @@ body::after {
 }
 
 
-/* SCENARIO */
+/* =========================================
+   OZHUKKAM METER
+========================================= */
+
+.ozhukkam-meter {
+    max-width: 520px;
+
+    margin: 14px auto 20px;
+
+    width: 100%;
+}
+
+.meter-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 7px;
+
+    color: #aeb8d0;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.meter-heading strong {
+    color: #f6c54d;
+}
+
+.meter-track {
+    width: 100%;
+
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+#ozhukkam-bar {
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #52d5d7,
+            #f6c54d
+        );
+
+    transition: width 0.5s ease;
+}
+
+
+/* =========================================
+   QUEST PATH
+========================================= */
+
+.quest-path {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0;
+
+    margin: 18px auto 26px;
+
+    max-width: 520px;
+}
+
+.quest-node {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    border: 2px solid rgba(200, 200, 216, 0.25);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: #8f91a8;
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    transition: 0.3s ease;
+}
+
+.quest-node.active {
+    border-color: #f6c54d;
+
+    background: rgba(246, 197, 77, 0.15);
+
+    color: #f6c54d;
+
+    box-shadow:
+        0 0 15px rgba(246, 197, 77, 0.35);
+}
+
+.quest-node.completed {
+    border-color: #52d5d7;
+
+    background: rgba(82, 213, 215, 0.12);
+
+    color: #52d5d7;
+
+    font-size: 0;
+
+    box-shadow:
+        0 0 12px rgba(82, 213, 215, 0.25);
+}
+
+.quest-node.completed::after {
+    content: "✓";
+
+    font-size: 0.8rem;
+}
+
+.quest-node small {
+    position: absolute;
+
+    top: 42px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90px;
+
+    color: #8f91a8;
+
+    font-size: 0.55rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.quest-node.active small {
+    color: #f6c54d;
+}
+
+.quest-node.completed small {
+    color: #52d5d7;
+}
+
+.quest-line {
+    width: 55px;
+
+    height: 2px;
+
+    background: rgba(200, 200, 216, 0.2);
+
+    transition: 0.3s ease;
+}
+
+.quest-line.completed {
+    background: #52d5d7;
+
+    box-shadow:
+        0 0 8px rgba(82, 213, 215, 0.3);
+}
+
+
+/* =========================================
+   QUEST LEGEND
+========================================= */
+
+.quest-legend {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin: 18px auto 24px;
+
+    max-width: 700px;
+}
+
+.quest-legend span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(246, 197, 77, 0.18);
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: #aeb8d0;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.8px;
+}
+
+.quest-legend b {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: rgba(246, 197, 77, 0.12);
+
+    color: #f6c54d;
+
+    font-size: 0.7rem;
+}
+
+
+/* =========================================
+   SCENARIO
+========================================= */
 
 .scenario-card {
-
     width: 100%;
 
     padding: 40px;
@@ -648,17 +857,13 @@ body::after {
         0 25px 70px rgba(0, 0, 0, 0.25);
 }
 
-
 .scenario-icon {
-
     font-size: 50px;
 
     margin-bottom: 15px;
 }
 
-
 .scenario-category {
-
     font-size: 10px;
 
     letter-spacing: 3px;
@@ -666,17 +871,13 @@ body::after {
     color: #52d5d7;
 }
 
-
 .scenario-card h2 {
-
     margin: 12px 0;
 
     font-size: 30px;
 }
 
-
 .scenario-card p {
-
     max-width: 600px;
 
     margin: auto;
@@ -692,15 +893,12 @@ body::after {
 ========================================= */
 
 .choice-area {
-
     width: 100%;
 
     margin-top: 30px;
 }
 
-
 .choice-question {
-
     margin-bottom: 15px;
 
     text-align: center;
@@ -710,17 +908,13 @@ body::after {
     color: #858ca1;
 }
 
-
 #choices-container {
-
     display: grid;
 
     gap: 12px;
 }
 
-
 .choice-btn {
-
     width: 100%;
 
     padding: 18px 20px;
@@ -743,9 +937,7 @@ body::after {
         background 0.2s ease;
 }
 
-
 .choice-btn:hover {
-
     transform: translateX(6px);
 
     border-color: rgba(82, 213, 215, 0.5);
@@ -755,181 +947,76 @@ body::after {
 
 
 /* =========================================
-   RESULT SCREEN
+   CHOICE RESULT STATES
 ========================================= */
 
-#result-screen {
+.choice-btn.choice-good {
+    border-color: rgba(76, 220, 150, 0.8);
 
-    text-align: center;
+    background:
+        rgba(76, 220, 150, 0.12);
 
-    max-width: 650px;
+    box-shadow:
+        0 0 25px rgba(76, 220, 150, 0.12);
 
-    margin: auto;
+    animation: choiceSuccess 0.45s ease;
 }
 
+.choice-btn.choice-learning {
+    border-color: rgba(246, 176, 66, 0.7);
 
-.result-icon {
+    background:
+        rgba(246, 176, 66, 0.1);
 
-    font-size: 70px;
-
-    margin-bottom: 20px;
-
-    animation: trophyFloat 2s ease-in-out infinite;
+    animation: choiceLearning 0.45s ease;
 }
 
+@keyframes choiceSuccess {
 
-@keyframes trophyFloat {
-
-    0%,
-    100% {
-        transform: rotate(-3deg) translateY(0);
+    0% {
+        transform: scale(1);
     }
 
     50% {
-        transform: rotate(3deg) translateY(-8px);
+        transform: scale(1.025);
     }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+@keyframes choiceLearning {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+
+    75% {
+        transform: translateX(-2px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
 }
 
 
-#result-screen h2 {
-
-    font-size: 48px;
-
-    line-height: 1.1;
-
-    margin-bottom: 30px;
-}
-
-
-#result-screen h2 span {
-
-    color: #f6c54d;
-}
-
-
-.final-score-card {
-
-    width: 230px;
-
-    margin: 0 auto 25px;
-
-    padding: 25px;
-
-    border-radius: 22px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(246, 197, 77, 0.12),
-            rgba(255, 255, 255, 0.03)
-        );
-
-    border: 1px solid rgba(246, 197, 77, 0.25);
-}
-
-
-.final-score-card p {
-
-    font-size: 9px;
-
-    letter-spacing: 2px;
-
-    color: #aeb4c5;
-}
-
-
-.final-score-card strong {
-
-    display: inline-block;
-
-    margin-top: 8px;
-
-    font-size: 55px;
-
-    color: #f6c54d;
-}
-
-
-.final-score-card span {
-
-    font-size: 12px;
-
-    color: #52d5d7;
-}
-
-
-#result-message {
-
-    max-width: 480px;
-
-    margin: 0 auto 30px;
-
-    line-height: 1.7;
-
-    color: #aeb4c5;
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    .game-header {
-
-        padding: 16px 5%;
-    }
-
-    .brand h1 {
-
-        font-size: 14px;
-    }
-
-    .brand-icon {
-
-        width: 42px;
-        height: 42px;
-
-        font-size: 20px;
-    }
-
-    .game-container {
-
-        width: 90%;
-    }
-
-    .screen {
-
-        padding: 45px 0;
-    }
-
-    .intro-content h2 {
-
-        font-size: 52px;
-    }
-
-    .kural-card {
-
-        padding: 25px 18px;
-    }
-
-    .scenario-card {
-
-        padding: 28px 20px;
-    }
-
-    #result-screen h2 {
-
-        font-size: 38px;
-    }
-}
 /* =========================================
    CHOICE FEEDBACK
 ========================================= */
 
 .feedback-message {
-
     margin-top: 16px;
 
     padding: 15px 18px;
@@ -953,342 +1040,68 @@ body::after {
 
 .feedback-title {
     font-size: 1.1rem;
+
     font-weight: 800;
+
     color: #f6c54d;
+
     margin-bottom: 8px;
+
     letter-spacing: 1px;
 }
 
 .feedback-xp {
     font-size: 1.3rem;
+
     font-weight: 800;
+
     color: #52d5d7;
+
     margin-bottom: 10px;
 }
 
 .feedback-text {
     color: #ffffff;
+
     font-size: 0.95rem;
+
     line-height: 1.5;
+
     margin-bottom: 10px;
 }
 
 .feedback-kural {
     color: #c8c8d8;
+
     font-size: 0.85rem;
+
     font-style: italic;
 }
-
 
 @keyframes feedbackEnter {
 
     from {
         opacity: 0;
+
         transform: translateY(8px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
 
 }
-/* =========================================
-   CHOICE RESULT STATES
-========================================= */
 
-.choice-btn.choice-good {
 
-    border-color: rgba(76, 220, 150, 0.8);
-
-    background:
-        rgba(76, 220, 150, 0.12);
-
-    box-shadow:
-        0 0 25px rgba(76, 220, 150, 0.12);
-
-    animation: choiceSuccess 0.45s ease;
-}
-
-
-.choice-btn.choice-learning {
-
-    border-color: rgba(246, 176, 66, 0.7);
-
-    background:
-        rgba(246, 176, 66, 0.1);
-
-    animation: choiceLearning 0.45s ease;
-}
-
-
-@keyframes choiceSuccess {
-
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.025);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-
-@keyframes choiceLearning {
-
-    0% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(-4px);
-    }
-
-    50% {
-        transform: translateX(4px);
-    }
-
-    75% {
-        transform: translateX(-2px);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-
-/* =========================================
-   XP POPUP
-========================================= */
-
-.xp-popup {
-
-    position: fixed;
-
-    top: 105px;
-    right: 8%;
-
-    z-index: 100;
-
-    padding: 9px 16px;
-
-    border-radius: 20px;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: #10121c;
-
-    background: #f6c54d;
-
-    box-shadow:
-        0 8px 30px rgba(246, 197, 77, 0.3);
-
-    animation: xpFloat 1s ease forwards;
-}
-
-
-@keyframes xpFloat {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            translateY(15px)
-            scale(0.8);
-
-    }
-
-    20% {
-
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-
-    }
-
-    70% {
-
-        opacity: 1;
-
-        transform:
-            translateY(-15px)
-            scale(1);
-
-    }
-
-    100% {
-
-        opacity: 0;
-
-        transform:
-            translateY(-35px)
-            scale(0.9);
-
-    }
-}
-/* =========================================
-   CHOICE RESULT STATES
-========================================= */
-
-.choice-btn.choice-good {
-
-    border-color: rgba(76, 220, 150, 0.8);
-
-    background:
-        rgba(76, 220, 150, 0.12);
-
-    box-shadow:
-        0 0 25px rgba(76, 220, 150, 0.12);
-
-    animation: choiceSuccess 0.45s ease;
-}
-
-
-.choice-btn.choice-learning {
-
-    border-color: rgba(246, 176, 66, 0.7);
-
-    background:
-        rgba(246, 176, 66, 0.1);
-
-    animation: choiceLearning 0.45s ease;
-}
-
-
-@keyframes choiceSuccess {
-
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.025);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-
-@keyframes choiceLearning {
-
-    0% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(-4px);
-    }
-
-    50% {
-        transform: translateX(4px);
-    }
-
-    75% {
-        transform: translateX(-2px);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-
-/* =========================================
-   XP POPUP
-========================================= */
-
-.xp-popup {
-
-    position: fixed;
-
-    top: 105px;
-    right: 8%;
-
-    z-index: 100;
-
-    padding: 9px 16px;
-
-    border-radius: 20px;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: #10121c;
-
-    background: #f6c54d;
-
-    box-shadow:
-        0 8px 30px rgba(246, 197, 77, 0.3);
-
-    animation: xpFloat 1s ease forwards;
-}
-
-
-@keyframes xpFloat {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            translateY(15px)
-            scale(0.8);
-
-    }
-
-    20% {
-
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-
-    }
-
-    70% {
-
-        opacity: 1;
-
-        transform:
-            translateY(-15px)
-            scale(1);
-
-    }
-
-    100% {
-
-        opacity: 0;
-
-        transform:
-            translateY(-35px)
-            scale(0.9);
-
-    }
-}
 /* =========================================
    NEXT CHALLENGE BUTTON
 ========================================= */
 
 .next-btn {
     margin: 22px auto 0;
+
     display: block;
 
     padding: 14px 26px;
@@ -1314,7 +1127,6 @@ body::after {
 }
 
 .next-btn:hover {
-
     transform: translateY(-3px);
 
     background:
@@ -1329,54 +1141,135 @@ body::after {
 }
 
 .next-btn:active {
-
     transform: translateY(0);
 }
 
+
+/* =========================================
+   XP POPUP
+========================================= */
+
 .xp-popup {
     position: fixed;
+
     top: 90px;
     right: 30px;
 
     color: #52d5d7;
+
     font-size: 1.4rem;
+
     font-weight: 800;
 
     pointer-events: none;
+
     z-index: 9999;
 
     animation: xpFloat 1s ease-out forwards;
 }
 
 @keyframes xpFloat {
+
     0% {
         opacity: 0;
-        transform: translateY(15px) scale(0.8);
+
+        transform:
+            translateY(15px)
+            scale(0.8);
     }
 
     20% {
         opacity: 1;
-        transform: translateY(0) scale(1);
+
+        transform:
+            translateY(0)
+            scale(1);
     }
 
     100% {
         opacity: 0;
-        transform: translateY(-45px) scale(1.05);
+
+        transform:
+            translateY(-45px)
+            scale(1.05);
     }
+
 }
+
+
+/* =========================================
+   RESULT SCREEN
+========================================= */
+
+#result-screen {
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+.result-icon {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    animation: trophyFloat 2s ease-in-out infinite;
+}
+
+@keyframes trophyFloat {
+
+    0%,
+    100% {
+        transform:
+            rotate(-3deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotate(3deg)
+            translateY(-8px);
+    }
+
+}
+
+#result-screen h2 {
+    font-size: 48px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+#result-screen h2 span {
+    color: #f6c54d;
+}
+
+
+/* =========================================
+   RANK BADGE
+========================================= */
+
 .rank-badge {
     display: inline-block;
-    margin: 12px 0 18px;
+
+    margin: 12px 0 8px;
+
     padding: 10px 20px;
 
     border: 1px solid rgba(246, 197, 77, 0.5);
+
     border-radius: 30px;
 
     background: rgba(246, 197, 77, 0.08);
 
     color: #f6c54d;
+
     font-size: 0.95rem;
+
     font-weight: 800;
+
     letter-spacing: 1px;
 
     box-shadow:
@@ -1386,23 +1279,150 @@ body::after {
 }
 
 @keyframes rankAppear {
+
     0% {
         opacity: 0;
-        transform: translateY(10px) scale(0.9);
+
+        transform:
+            translateY(10px)
+            scale(0.9);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0) scale(1);
+
+        transform:
+            translateY(0)
+            scale(1);
     }
+
 }
+
+
+/* =========================================
+   ACHIEVEMENT
+========================================= */
+
+.achievement-text {
+    margin: 8px auto 18px;
+
+    padding: 9px 16px;
+
+    width: fit-content;
+
+    max-width: 90%;
+
+    border: 1px solid rgba(82, 213, 215, 0.25);
+
+    border-radius: 20px;
+
+    background: rgba(82, 213, 215, 0.06);
+
+    color: #52d5d7;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    text-align: center;
+
+    animation: achievementPop 0.6s ease;
+}
+
+@keyframes achievementPop {
+
+    0% {
+        opacity: 0;
+
+        transform: scale(0.85);
+    }
+
+    70% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================
+   FINAL SCORE
+========================================= */
+
+.final-score-card {
+    width: 230px;
+
+    margin: 0 auto 25px;
+
+    padding: 25px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(246, 197, 77, 0.12),
+            rgba(255, 255, 255, 0.03)
+        );
+
+    border: 1px solid rgba(246, 197, 77, 0.25);
+}
+
+.final-score-card p {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #aeb4c5;
+}
+
+.final-score-card strong {
+    display: inline-block;
+
+    margin-top: 8px;
+
+    font-size: 55px;
+
+    color: #f6c54d;
+}
+
+.final-score-card span {
+    font-size: 12px;
+
+    color: #52d5d7;
+}
+
+#result-message {
+    max-width: 480px;
+
+    margin: 0 auto 30px;
+
+    line-height: 1.7;
+
+    color: #aeb4c5;
+}
+
+
+/* =========================================
+   WISDOM CARD
+========================================= */
 
 .wisdom-card {
     margin: 24px auto;
+
     max-width: 620px;
+
     padding: 24px;
 
     border: 1px solid rgba(82, 213, 215, 0.35);
+
     border-radius: 18px;
 
     background: rgba(82, 213, 215, 0.06);
@@ -1417,15 +1437,21 @@ body::after {
     margin-bottom: 14px;
 
     color: #52d5d7;
+
     font-size: 0.75rem;
+
     font-weight: 800;
+
     letter-spacing: 2px;
 }
 
 .wisdom-kural {
     color: #f6c54d;
+
     font-size: 1.15rem;
+
     font-weight: 700;
+
     line-height: 1.8;
 
     margin-bottom: 14px;
@@ -1433,110 +1459,57 @@ body::after {
 
 .wisdom-meaning {
     color: #c8c8d8;
+
     font-size: 0.9rem;
+
     line-height: 1.6;
 }
 
-.quest-path {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    margin: 18px auto 26px;
-    max-width: 520px;
-}
 
-.quest-node {
-    width: 34px;
-    height: 34px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 2px solid rgba(200, 200, 216, 0.25);
-    border-radius: 50%;
-
-    background: rgba(255, 255, 255, 0.04);
-
-    color: #8f91a8;
-    font-size: 0.85rem;
-    font-weight: 800;
-
-    transition: 0.3s ease;
-}
-
-.quest-node.active {
-    border-color: #f6c54d;
-    background: rgba(246, 197, 77, 0.15);
-    color: #f6c54d;
-
-    box-shadow:
-        0 0 15px rgba(246, 197, 77, 0.35);
-}
-
-.quest-node.completed {
-    border-color: #52d5d7;
-    background: rgba(82, 213, 215, 0.12);
-    color: #52d5d7;
-
-    box-shadow:
-        0 0 12px rgba(82, 213, 215, 0.25);
-}
-
-.quest-node.completed::after {
-    content: "✓";
-    font-size: 0.8rem;
-}
-
-.quest-node.completed {
-    font-size: 0;
-}
-
-.quest-line {
-    width: 55px;
-    height: 2px;
-    background: rgba(200, 200, 216, 0.2);
-}
-
-.quest-line.completed {
-    background: #52d5d7;
-    box-shadow: 0 0 8px rgba(82, 213, 215, 0.3);
-}
-
-.quest-node {
-    position: relative;
-}
-
-.quest-node small {
-    position: absolute;
-    top: 42px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 90px;
-
-    color: #8f91a8;
-    font-size: 0.55rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-align: center;
-
-    white-space: nowrap;
-}
-
-.quest-node.active small {
-    color: #f6c54d;
-}
-
-.quest-node.completed small {
-    color: #52d5d7;
-}
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 600px) {
 
+    .game-header {
+        padding: 16px 5%;
+    }
+
+    .brand h1 {
+        font-size: 14px;
+    }
+
+    .brand-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 20px;
+    }
+
+    .game-container {
+        width: 90%;
+    }
+
+    .screen {
+        padding: 45px 0;
+    }
+
+    .intro-content h2 {
+        font-size: 52px;
+    }
+
+    .kural-card {
+        padding: 25px 18px;
+    }
+
+    .scenario-card {
+        padding: 28px 20px;
+    }
+
     .quest-path {
         max-width: 100%;
+
         padding: 0 8px;
     }
 
@@ -1546,152 +1519,26 @@ body::after {
 
     .quest-node small {
         width: 65px;
+
         font-size: 0.45rem;
     }
-}
 
-/* QUEST LEGEND */
-
-.quest-legend {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin: 18px auto 24px;
-    max-width: 700px;
-}
-
-.quest-legend span {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    padding: 7px 12px;
-    border: 1px solid rgba(246, 197, 77, 0.18);
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.035);
-    color: #aeb8d0;
-    font-size: 0.72rem;
-    letter-spacing: 0.8px;
-}
-
-.quest-legend b {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: rgba(246, 197, 77, 0.12);
-    color: #f6c54d;
-    font-size: 0.7rem;
-}
-
-/* QUEST PATH PROGRESS STATES */
-
-.quest-node.completed {
-    border-color: #4cdc96;
-    background: rgba(76, 220, 150, 0.12);
-    color: #4cdc96;
-    box-shadow: 0 0 14px rgba(76, 220, 150, 0.18);
-}
-
-.quest-node.active {
-    border-color: #f6c54d;
-    background: rgba(246, 197, 77, 0.16);
-    color: #f6c54d;
-    box-shadow: 0 0 20px rgba(246, 197, 77, 0.28);
-    transform: scale(1.08);
-}
-
-.quest-node:not(.active):not(.completed) {
-    opacity: 0.45;
-}
-
-/* OZHUKKAM METER */
-
-.ozhukkam-meter {
-    max-width: 520px;
-    margin: 14px auto 20px;
-}
-
-.meter-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 7px;
-
-    color: #aeb8d0;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.meter-heading strong {
-    color: #f6c54d;
-}
-
-.meter-track {
-    width: 100%;
-    height: 7px;
-
-    overflow: hidden;
-    border-radius: 10px;
-
-    background: rgba(255, 255, 255, 0.08);
-}
-
-#ozhukkam-bar {
-    width: 0%;
-    height: 100%;
-
-    border-radius: 10px;
-
-    background: linear-gradient(
-        90deg,
-        #52d5d7,
-        #f6c54d
-    );
-
-    transition: width 0.5s ease;
-}
-/* ACHIEVEMENT */
-
-.achievement-text {
-    margin: 12px auto 18px;
-    padding: 9px 16px;
-
-    width: fit-content;
-    max-width: 90%;
-
-    border: 1px solid rgba(82, 213, 215, 0.25);
-    border-radius: 20px;
-
-    background: rgba(82, 213, 215, 0.06);
-
-    color: #52d5d7;
-
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-
-    text-align: center;
-
-    animation: achievementPop 0.6s ease;
-}
-
-@keyframes achievementPop {
-
-    0% {
-        opacity: 0;
-        transform: scale(0.85);
+    .quest-legend {
+        gap: 8px;
     }
 
-    70% {
-        transform: scale(1.05);
+    .quest-legend span {
+        font-size: 0.62rem;
+
+        padding: 6px 9px;
     }
 
-    100% {
-        opacity: 1;
-        transform: scale(1);
+    #result-screen h2 {
+        font-size: 38px;
     }
+
+    .xp-popup {
+        right: 15px;
+    }
+
 }

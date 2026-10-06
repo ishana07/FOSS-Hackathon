@@ -153,10 +153,6 @@ let score = 0;
 /* =========================================
    GET HTML ELEMENTS
 ========================================= */
-let goodChoiceStreak = 0;
-
-const streakValue =
-    document.getElementById("streak-value");
 
 const introScreen =
     document.getElementById("intro-screen");
@@ -197,8 +193,9 @@ const resultMessage =
 const rankBadge =
     document.getElementById("rank-badge");
 
-    const achievementText =
+const achievementText =
     document.getElementById("achievement-text");
+
 const scenarioNumber =
     document.getElementById("scenario-number");
 
@@ -235,24 +232,19 @@ function startGame() {
 
     currentScenario = 0;
     score = 0;
-    goodChoiceStreak = 0;
-
-if (streakValue) {
-    streakValue.textContent = "0";
-}
 
     scoreDisplay.textContent = score;
 
-    const meterValue =
-    document.getElementById("ozhukkam-value");
+    /* Reset Ozhukkam Meter */
 
-const meterBar =
-    document.getElementById("ozhukkam-bar");
+    if (ozhukkamValue && ozhukkamBar) {
 
-if (meterValue && meterBar) {
-    meterValue.textContent = "0%";
-    meterBar.style.width = "0%";
-}
+        ozhukkamValue.textContent = "0%";
+        ozhukkamBar.style.width = "0%";
+
+    }
+
+    /* Show quest screen */
 
     introScreen.classList.remove("active");
 
@@ -269,31 +261,49 @@ if (meterValue && meterBar) {
 
 function loadScenario() {
 
+    /* Update quest path */
+
     questNodes.forEach((node, index) => {
 
-    node.classList.remove("active", "completed");
+        node.classList.remove("active", "completed");
 
-    if (index < currentScenario) {
-        node.classList.add("completed");
-    }
+        if (index < currentScenario) {
 
-    if (index === currentScenario) {
-        node.classList.add("active");
-    }
+            node.classList.add("completed");
 
-    if (questLines[index]) {
-        questLines[index].classList.toggle(
-            "completed",
-            index < currentScenario
-        );
-    }
+        }
 
-});
+        if (index === currentScenario) {
 
-    const scenario = scenarios[currentScenario];
+            node.classList.add("active");
+
+        }
+
+        if (questLines[index]) {
+
+            questLines[index].classList.toggle(
+                "completed",
+                index < currentScenario
+            );
+
+        }
+
+    });
+
+
+    /* Get current scenario */
+
+    const scenario =
+        scenarios[currentScenario];
+
+
+    /* Challenge number */
 
     scenarioNumber.textContent =
-    `CHALLENGE ${String(currentScenario + 1).padStart(2, "0")} / ${scenarios.length}`;
+        `CHALLENGE ${String(currentScenario + 1).padStart(2, "0")} / ${scenarios.length}`;
+
+
+    /* Scenario information */
 
     scenarioIcon.textContent =
         scenario.icon;
@@ -308,13 +318,13 @@ function loadScenario() {
         scenario.description;
 
 
-    /* Update progress */
+    /* Update progress bar */
 
     const progress =
-    ((currentScenario + 1) / scenarios.length) * 100;
+        ((currentScenario + 1) / scenarios.length) * 100;
 
-progressBar.style.width =
-    `${progress}%`;
+    progressBar.style.width =
+        `${progress}%`;
 
 
     /* Clear old choices */
@@ -322,16 +332,23 @@ progressBar.style.width =
     choicesContainer.innerHTML = "";
 
 
-    /* Create new choice buttons */
+    /* Hide next button */
 
-    scenario.choices.forEach((choice, index) => {
+    nextButton.hidden = true;
+
+
+    /* Create choice buttons */
+
+    scenario.choices.forEach((choice) => {
 
         const button =
             document.createElement("button");
 
-        button.className = "choice-btn";
+        button.className =
+            "choice-btn";
 
-        button.textContent = choice.text;
+        button.textContent =
+            choice.text;
 
         button.addEventListener(
             "click",
@@ -351,63 +368,85 @@ progressBar.style.width =
 
 function selectChoice(choice, selectedButton) {
 
-    // Prevent multiple clicks
-    const buttons = document.querySelectorAll(".choice-btn");
+    /* Prevent multiple clicks */
+
+    const buttons =
+        document.querySelectorAll(".choice-btn");
 
     buttons.forEach(button => {
+
         button.disabled = true;
         button.style.cursor = "default";
+
     });
 
-    // Add points
+
+    /* Add points */
+
     score += choice.points;
 
     scoreDisplay.textContent = score;
 
-    if (choice.points >= 80) {
-    goodChoiceStreak++;
-} else {
-    goodChoiceStreak = 0;
-}
 
-if (streakValue) {
-    streakValue.textContent = goodChoiceStreak;
-}
+    /* =====================================
+       UPDATE OZHUKKAM METER
+    ===================================== */
 
-    const meterValue = document.getElementById("ozhukkam-value");
-const meterBar = document.getElementById("ozhukkam-bar");
+    if (ozhukkamValue && ozhukkamBar) {
 
-if (meterValue && meterBar) {
-    const percentage =
-        Math.round((score / (scenarios.length * 100)) * 100);
+        const percentage =
+            Math.round(
+                (score / (scenarios.length * 100)) * 100
+            );
 
-    meterValue.textContent = `${percentage}%`;
-    meterBar.style.width = `${percentage}%`;
-}
+        ozhukkamValue.textContent =
+            `${percentage}%`;
+
+        ozhukkamBar.style.width =
+            `${percentage}%`;
+
+    }
+
+
+    /* XP animation */
 
     showXPGain(choice.points);
 
-    // Highlight selected answer
+
+    /* =====================================
+       HIGHLIGHT SELECTED ANSWER
+    ===================================== */
+
     if (choice.points >= 80) {
 
-        selectedButton.style.borderColor = "#4cdc96";
+        selectedButton.style.borderColor =
+            "#4cdc96";
+
         selectedButton.style.background =
             "rgba(76, 220, 150, 0.12)";
 
     } else {
 
-        selectedButton.style.borderColor = "#f6b042";
+        selectedButton.style.borderColor =
+            "#f6b042";
+
         selectedButton.style.background =
             "rgba(246, 176, 66, 0.10)";
+
     }
 
-    // Show feedback
+
+    /* Show feedback */
+
     showFeedback(choice);
+
 
     /* Show NEXT CHALLENGE button */
 
-nextButton.hidden = false;
+    nextButton.hidden = false;
+
 }
+
 
 /* =========================================
    NEXT CHALLENGE BUTTON
@@ -441,33 +480,55 @@ function showFeedback(choice) {
     const feedback =
         document.createElement("div");
 
-    feedback.className = "feedback-message";
+    feedback.className =
+        "feedback-message";
 
-    const isGoodChoice = choice.points >= 80;
+    const isGoodChoice =
+        choice.points >= 80;
+
 
     feedback.innerHTML = `
+
         <div class="feedback-title">
-            ${isGoodChoice ? "✦ GREAT CHOICE! ✦" : "✦ THINK AGAIN ✦"}
+
+            ${
+                isGoodChoice
+                    ? "✦ GREAT CHOICE! ✦"
+                    : "✦ THINK AGAIN ✦"
+            }
+
         </div>
+
 
         <div class="feedback-xp">
+
             +${choice.points} XP
+
         </div>
+
 
         <div class="feedback-text">
+
             ${choice.feedback}
+
         </div>
 
+
         <div class="feedback-kural">
+
             ${
                 isGoodChoice
                     ? "✓ This reflects Ozhukkam."
                     : "💡 Good conduct matters even when it's hard."
             }
+
         </div>
+
     `;
 
+
     choicesContainer.appendChild(feedback);
+
 }
 
 
@@ -481,46 +542,55 @@ function finishGame() {
 
     resultScreen.classList.add("active");
 
-    finalScore.textContent = score;
+    finalScore.textContent =
+        score;
 
-    progressBar.style.width = "100%";
+    progressBar.style.width =
+        "100%";
 
 
-    /* Different ending messages */
+    /* =====================================
+       RESULT RANKS
+    ===================================== */
 
     if (score >= 450) {
 
-    rankBadge.textContent =
-        "🏆 OZHUKKAM MASTER";
+        rankBadge.textContent =
+            "🏆 OZHUKKAM MASTER";
 
-    achievementText.textContent =
-        "Achievement unlocked: Guardian of Good Conduct";
+        achievementText.textContent =
+            "Achievement unlocked: Guardian of Good Conduct";
 
-    resultMessage.textContent =
-        "Your choices show excellent character!";
+        resultMessage.textContent =
+            "Your choices show excellent character!";
 
-} else if (score >= 300) {
+    }
 
-    rankBadge.textContent =
-        "🌟 GOOD CONDUCT HERO";
+    else if (score >= 300) {
 
-    achievementText.textContent =
-        "Achievement unlocked: Thoughtful Decision Maker";
+        rankBadge.textContent =
+            "🌟 GOOD CONDUCT HERO";
 
-    resultMessage.textContent =
-        "You're learning to make thoughtful choices.";
+        achievementText.textContent =
+            "Achievement unlocked: Thoughtful Decision Maker";
 
-} else {
+        resultMessage.textContent =
+            "You're learning to make thoughtful choices.";
 
-    rankBadge.textContent =
-        "🌱 OZHUKKAM EXPLORER";
+    }
 
-    achievementText.textContent =
-        "Achievement unlocked: First Step on the Quest";
+    else {
 
-    resultMessage.textContent =
-        "Every choice is a chance to learn.";
-}
+        rankBadge.textContent =
+            "🌱 OZHUKKAM EXPLORER";
+
+        achievementText.textContent =
+            "Achievement unlocked: First Step on the Quest";
+
+        resultMessage.textContent =
+            "Every choice is a chance to learn.";
+
+    }
 
 }
 
@@ -545,23 +615,49 @@ function restartGame() {
 
     score = 0;
 
-    scoreDisplay.textContent = score;
+    scoreDisplay.textContent =
+        score;
 
-    progressBar.style.width = "10%";
+    progressBar.style.width =
+        "20%";
+
+    /* Reset Ozhukkam Meter */
+
+    if (ozhukkamValue && ozhukkamBar) {
+
+        ozhukkamValue.textContent =
+            "0%";
+
+        ozhukkamBar.style.width =
+            "0%";
+
+    }
 
 }
 
+
+/* =========================================
+   XP POPUP
+========================================= */
+
 function showXPGain(points) {
 
-    const xpPopup = document.createElement("div");
+    const xpPopup =
+        document.createElement("div");
 
-    xpPopup.className = "xp-popup";
+    xpPopup.className =
+        "xp-popup";
 
-    xpPopup.textContent = `+${points} XP`;
+    xpPopup.textContent =
+        `+${points} XP`;
 
     document.body.appendChild(xpPopup);
 
+
     setTimeout(() => {
+
         xpPopup.remove();
+
     }, 1000);
+
 }

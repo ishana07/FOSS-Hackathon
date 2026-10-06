@@ -19,6 +19,7 @@
 
         <div class="brand">
             <span class="brand-icon">🏹</span>
+
             <div>
                 <h1>ஒழுக்கம் QUEST</h1>
                 <p>Thirukkural 131</p>
@@ -40,7 +41,10 @@
 
     <main class="game-container">
 
-        <!-- INTRO SCREEN -->
+
+        <!-- ==============================
+             INTRO SCREEN
+        =============================== -->
 
         <section id="intro-screen" class="screen active">
 
@@ -109,72 +113,102 @@
                 </div>
 
             </div>
-            
+
+
+            <!-- OZHUKKAM METER -->
+
             <div class="ozhukkam-meter">
 
-    <div class="meter-heading">
-        <span>🧭 OZHUKKAM METER</span>
-        <strong id="ozhukkam-value">0%</strong>
-    </div>
+                <div class="meter-heading">
+                    <span>🧭 OZHUKKAM METER</span>
+                    <strong id="ozhukkam-value">0%</strong>
+                </div>
 
-    <div class="meter-track">
-        <div id="ozhukkam-bar"></div>
-    </div>
+                <div class="meter-track">
+                    <div id="ozhukkam-bar"></div>
+                </div>
 
-</div>
+            </div>
+
+
+            <!-- QUEST PATH -->
 
             <div class="quest-path" id="quest-path">
 
-    <div class="quest-node active">
-        <span>1</span>
-        <small>HONESTY</small>
-    </div>
+                <div class="quest-node active">
+                    <span>1</span>
+                    <small>HONESTY</small>
+                </div>
 
-    <div class="quest-line"></div>
+                <div class="quest-line"></div>
 
-    <div class="quest-node">
-        <span>2</span>
-        <small>KINDNESS</small>
-    </div>
+                <div class="quest-node">
+                    <span>2</span>
+                    <small>KINDNESS</small>
+                </div>
 
-    <div class="quest-line"></div>
+                <div class="quest-line"></div>
 
-    <div class="quest-node">
-        <span>3</span>
-        <small>RESPECT</small>
-    </div>
+                <div class="quest-node">
+                    <span>3</span>
+                    <small>RESPECT</small>
+                </div>
 
-    <div class="quest-line"></div>
+                <div class="quest-line"></div>
 
-    <div class="quest-node">
-        <span>4</span>
-        <small>CARE</small>
-    </div>
+                <div class="quest-node">
+                    <span>4</span>
+                    <small>CARE</small>
+                </div>
 
-    <div class="quest-line"></div>
+                <div class="quest-line"></div>
 
-    <div class="quest-node">
-        <span>5</span>
-        <small>RESPONSIBILITY</small>
-    </div>
+                <div class="quest-node">
+                    <span>5</span>
+                    <small>RESPONSIBILITY</small>
+                </div>
 
-</div>
+            </div>
 
-<div class="quest-legend">
-    <span><b>1</b> HONESTY</span>
-    <span><b>2</b> KINDNESS</span>
-    <span><b>3</b> RESPECT</span>
-    <span><b>4</b> CARE</span>
-    <span><b>5</b> RESPONSIBILITY</span>
-</div>
 
-<div class="scenario-card">
+            <!-- QUEST LEGEND -->
+
+            <div class="quest-legend">
+
+                <span>
+                    <b>1</b> HONESTY
+                </span>
+
+                <span>
+                    <b>2</b> KINDNESS
+                </span>
+
+                <span>
+                    <b>3</b> RESPECT
+                </span>
+
+                <span>
+                    <b>4</b> CARE
+                </span>
+
+                <span>
+                    <b>5</b> RESPONSIBILITY
+                </span>
+
+            </div>
+
+
+            <!-- SCENARIO CARD -->
+
+            <div class="scenario-card">
 
                 <div class="scenario-icon" id="scenario-icon">
                     🏫
                 </div>
 
-                <span class="scenario-category" id="scenario-category">
+                <span
+                    class="scenario-category"
+                    id="scenario-category">
                     CLASSROOM
                 </span>
 
@@ -190,6 +224,8 @@
             </div>
 
 
+            <!-- CHOICE AREA -->
+
             <div class="choice-area">
 
                 <p class="choice-question">
@@ -197,12 +233,14 @@
                 </p>
 
                 <div id="choices-container">
-
-    <!-- Choices will be inserted by JavaScript -->
+                    <!-- Choices will be inserted by JavaScript -->
                 </div>
-                
-                <button id="next-btn" class="primary-btn next-btn" hidden>
-    NEXT CHALLENGE →
+
+                <button
+                    id="next-btn"
+                    class="primary-btn next-btn"
+                    hidden>
+                    NEXT CHALLENGE →
                 </button>
 
             </div>
@@ -228,8 +266,25 @@
                 Your Choices<br>
                 Define <span>You!</span>
             </h2>
-            <div id="rank-badge" class="rank-badge"></div>
-            <div id="achievement-text" class="achievement-text"></div>
+
+
+            <!-- RANK -->
+
+            <div
+                id="rank-badge"
+                class="rank-badge">
+            </div>
+
+
+            <!-- ACHIEVEMENT -->
+
+            <div
+                id="achievement-text"
+                class="achievement-text">
+            </div>
+
+
+            <!-- FINAL SCORE -->
 
             <div class="final-score-card">
 
@@ -243,30 +298,42 @@
 
             </div>
 
+
+            <!-- RESULT MESSAGE -->
+
             <p id="result-message">
                 Great job! You understood the spirit
                 of Thirukkural 131.
             </p>
 
+
+            <!-- WISDOM CARD -->
+
             <div class="wisdom-card">
 
-    <div class="wisdom-label">
-        ✦ THIRUKKURAL WISDOM ✦
-    </div>
+                <div class="wisdom-label">
+                    ✦ THIRUKKURAL WISDOM ✦
+                </div>
 
-    <div class="wisdom-kural">
-        ஒழுக்கம் விழுப்பந் தரலான் ஒழுக்கம்<br>
-        உயிரினும் ஓம்பப் படும்.
-    </div>
+                <div class="wisdom-kural">
+                    ஒழுக்கம் விழுப்பந் தரலான் ஒழுக்கம்<br>
+                    உயிரினும் ஓம்பப் படும்.
+                </div>
 
-    <div class="wisdom-meaning">
-        Good conduct makes us truly great,
-        so we should protect it even more carefully than our life.
-    </div>
+                <div class="wisdom-meaning">
+                    Good conduct makes us truly great,
+                    so we should protect it even more
+                    carefully than our life.
+                </div>
 
-</div>
+            </div>
 
-            <button id="restart-btn" class="primary-btn">
+
+            <!-- RESTART -->
+
+            <button
+                id="restart-btn"
+                class="primary-btn">
                 PLAY AGAIN ↻
             </button>
 
