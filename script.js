@@ -197,6 +197,8 @@ const resultMessage =
 const rankBadge =
     document.getElementById("rank-badge");
 
+    const achievementText =
+    document.getElementById("achievement-text");
 const scenarioNumber =
     document.getElementById("scenario-number");
 
@@ -491,6 +493,9 @@ function finishGame() {
     rankBadge.textContent =
         "🏆 OZHUKKAM MASTER";
 
+    achievementText.textContent =
+        "Achievement unlocked: Guardian of Good Conduct";
+
     resultMessage.textContent =
         "Your choices show excellent character!";
 
@@ -499,6 +504,9 @@ function finishGame() {
     rankBadge.textContent =
         "🌟 GOOD CONDUCT HERO";
 
+    achievementText.textContent =
+        "Achievement unlocked: Thoughtful Decision Maker";
+
     resultMessage.textContent =
         "You're learning to make thoughtful choices.";
 
@@ -506,6 +514,9 @@ function finishGame() {
 
     rankBadge.textContent =
         "🌱 OZHUKKAM EXPLORER";
+
+    achievementText.textContent =
+        "Achievement unlocked: First Step on the Quest";
 
     resultMessage.textContent =
         "Every choice is a chance to learn.";

@@ -1654,3 +1654,44 @@ body::after {
 
     transition: width 0.5s ease;
 }
+/* ACHIEVEMENT */
+
+.achievement-text {
+    margin: 12px auto 18px;
+    padding: 9px 16px;
+
+    width: fit-content;
+    max-width: 90%;
+
+    border: 1px solid rgba(82, 213, 215, 0.25);
+    border-radius: 20px;
+
+    background: rgba(82, 213, 215, 0.06);
+
+    color: #52d5d7;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    text-align: center;
+
+    animation: achievementPop 0.6s ease;
+}
+
+@keyframes achievementPop {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    70% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
