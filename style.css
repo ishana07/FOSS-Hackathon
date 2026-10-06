@@ -1332,3 +1332,35 @@ body::after {
 
     transform: translateY(0);
 }
+
+.xp-popup {
+    position: fixed;
+    top: 90px;
+    right: 30px;
+
+    color: #52d5d7;
+    font-size: 1.4rem;
+    font-weight: 800;
+
+    pointer-events: none;
+    z-index: 9999;
+
+    animation: xpFloat 1s ease-out forwards;
+}
+
+@keyframes xpFloat {
+    0% {
+        opacity: 0;
+        transform: translateY(15px) scale(0.8);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-45px) scale(1.05);
+    }
+}

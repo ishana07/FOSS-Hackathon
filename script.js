@@ -306,6 +306,8 @@ function selectChoice(choice, selectedButton) {
 
     scoreDisplay.textContent = score;
 
+    showXPGain(choice.points);
+
     // Highlight selected answer
     if (choice.points >= 80) {
 
@@ -455,4 +457,19 @@ function restartGame() {
 
     progressBar.style.width = "10%";
 
+}
+
+function showXPGain(points) {
+
+    const xpPopup = document.createElement("div");
+
+    xpPopup.className = "xp-popup";
+
+    xpPopup.textContent = `+${points} XP`;
+
+    document.body.appendChild(xpPopup);
+
+    setTimeout(() => {
+        xpPopup.remove();
+    }, 1000);
 }
