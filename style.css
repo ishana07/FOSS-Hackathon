@@ -951,6 +951,34 @@ body::after {
     animation: feedbackEnter 0.4s ease;
 }
 
+.feedback-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #f6c54d;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.feedback-xp {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #52d5d7;
+    margin-bottom: 10px;
+}
+
+.feedback-text {
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.feedback-kural {
+    color: #c8c8d8;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
 
 @keyframes feedbackEnter {
 

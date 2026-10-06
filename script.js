@@ -321,7 +321,7 @@ function selectChoice(choice, selectedButton) {
     }
 
     // Show feedback
-    showFeedback(choice.feedback);
+    showFeedback(choice);
 
     /* Show NEXT CHALLENGE button */
 
@@ -355,17 +355,38 @@ nextButton.addEventListener("click", () => {
    FEEDBACK
 ========================================= */
 
-function showFeedback(message) {
+function showFeedback(choice) {
 
     const feedback =
         document.createElement("div");
 
     feedback.className = "feedback-message";
 
-    feedback.textContent = message;
+    const isGoodChoice = choice.points >= 80;
+
+    feedback.innerHTML = `
+        <div class="feedback-title">
+            ${isGoodChoice ? "✦ GREAT CHOICE! ✦" : "✦ THINK AGAIN ✦"}
+        </div>
+
+        <div class="feedback-xp">
+            +${choice.points} XP
+        </div>
+
+        <div class="feedback-text">
+            ${choice.feedback}
+        </div>
+
+        <div class="feedback-kural">
+            ${
+                isGoodChoice
+                    ? "✓ This reflects Ozhukkam."
+                    : "💡 Good conduct matters even when it's hard."
+            }
+        </div>
+    `;
 
     choicesContainer.appendChild(feedback);
-
 }
 
 
