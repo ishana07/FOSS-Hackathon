@@ -1549,3 +1549,60 @@ body::after {
         font-size: 0.45rem;
     }
 }
+
+/* QUEST LEGEND */
+
+.quest-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 18px auto 24px;
+    max-width: 700px;
+}
+
+.quest-legend span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 12px;
+    border: 1px solid rgba(246, 197, 77, 0.18);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.035);
+    color: #aeb8d0;
+    font-size: 0.72rem;
+    letter-spacing: 0.8px;
+}
+
+.quest-legend b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(246, 197, 77, 0.12);
+    color: #f6c54d;
+    font-size: 0.7rem;
+}
+
+/* QUEST PATH PROGRESS STATES */
+
+.quest-node.completed {
+    border-color: #4cdc96;
+    background: rgba(76, 220, 150, 0.12);
+    color: #4cdc96;
+    box-shadow: 0 0 14px rgba(76, 220, 150, 0.18);
+}
+
+.quest-node.active {
+    border-color: #f6c54d;
+    background: rgba(246, 197, 77, 0.16);
+    color: #f6c54d;
+    box-shadow: 0 0 20px rgba(246, 197, 77, 0.28);
+    transform: scale(1.08);
+}
+
+.quest-node:not(.active):not(.completed) {
+    opacity: 0.45;
+}
