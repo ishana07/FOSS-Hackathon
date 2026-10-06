@@ -1503,3 +1503,49 @@ body::after {
     background: #52d5d7;
     box-shadow: 0 0 8px rgba(82, 213, 215, 0.3);
 }
+
+.quest-node {
+    position: relative;
+}
+
+.quest-node small {
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90px;
+
+    color: #8f91a8;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.quest-node.active small {
+    color: #f6c54d;
+}
+
+.quest-node.completed small {
+    color: #52d5d7;
+}
+
+@media (max-width: 600px) {
+
+    .quest-path {
+        max-width: 100%;
+        padding: 0 8px;
+    }
+
+    .quest-line {
+        width: 25px;
+    }
+
+    .quest-node small {
+        width: 65px;
+        font-size: 0.45rem;
+    }
+}
