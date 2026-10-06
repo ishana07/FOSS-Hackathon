@@ -235,7 +235,7 @@ function loadScenario() {
     const scenario = scenarios[currentScenario];
 
     scenarioNumber.textContent =
-        `CHALLENGE ${String(currentScenario + 1).padStart(2, "0")}`;
+    `CHALLENGE ${String(currentScenario + 1).padStart(2, "0")} / ${scenarios.length}`;
 
     scenarioIcon.textContent =
         scenario.icon;
