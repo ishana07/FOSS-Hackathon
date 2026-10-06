@@ -1606,3 +1606,51 @@ body::after {
 .quest-node:not(.active):not(.completed) {
     opacity: 0.45;
 }
+
+/* OZHUKKAM METER */
+
+.ozhukkam-meter {
+    max-width: 520px;
+    margin: 14px auto 20px;
+}
+
+.meter-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7px;
+
+    color: #aeb8d0;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.meter-heading strong {
+    color: #f6c54d;
+}
+
+.meter-track {
+    width: 100%;
+    height: 7px;
+
+    overflow: hidden;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+#ozhukkam-bar {
+    width: 0%;
+    height: 100%;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #52d5d7,
+        #f6c54d
+    );
+
+    transition: width 0.5s ease;
+}

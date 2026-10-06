@@ -199,6 +199,12 @@ const scenarioNumber =
 const progressBar =
     document.getElementById("progress-bar");
 
+const ozhukkamValue =
+    document.getElementById("ozhukkam-value");
+
+const ozhukkamBar =
+    document.getElementById("ozhukkam-bar");
+
 const scenarioIcon =
     document.getElementById("scenario-icon");
 
@@ -225,6 +231,17 @@ function startGame() {
     score = 0;
 
     scoreDisplay.textContent = score;
+
+    const meterValue =
+    document.getElementById("ozhukkam-value");
+
+const meterBar =
+    document.getElementById("ozhukkam-bar");
+
+if (meterValue && meterBar) {
+    meterValue.textContent = "0%";
+    meterBar.style.width = "0%";
+}
 
     introScreen.classList.remove("active");
 
@@ -335,6 +352,17 @@ function selectChoice(choice, selectedButton) {
     score += choice.points;
 
     scoreDisplay.textContent = score;
+
+    const meterValue = document.getElementById("ozhukkam-value");
+const meterBar = document.getElementById("ozhukkam-bar");
+
+if (meterValue && meterBar) {
+    const percentage =
+        Math.round((score / (scenarios.length * 100)) * 100);
+
+    meterValue.textContent = `${percentage}%`;
+    meterBar.style.width = `${percentage}%`;
+}
 
     showXPGain(choice.points);
 
