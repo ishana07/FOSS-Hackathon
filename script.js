@@ -153,6 +153,10 @@ let score = 0;
 /* =========================================
    GET HTML ELEMENTS
 ========================================= */
+let goodChoiceStreak = 0;
+
+const streakValue =
+    document.getElementById("streak-value");
 
 const introScreen =
     document.getElementById("intro-screen");
@@ -229,6 +233,11 @@ function startGame() {
 
     currentScenario = 0;
     score = 0;
+    goodChoiceStreak = 0;
+
+if (streakValue) {
+    streakValue.textContent = "0";
+}
 
     scoreDisplay.textContent = score;
 
@@ -352,6 +361,16 @@ function selectChoice(choice, selectedButton) {
     score += choice.points;
 
     scoreDisplay.textContent = score;
+
+    if (choice.points >= 80) {
+    goodChoiceStreak++;
+} else {
+    goodChoiceStreak = 0;
+}
+
+if (streakValue) {
+    streakValue.textContent = goodChoiceStreak;
+}
 
     const meterValue = document.getElementById("ozhukkam-value");
 const meterBar = document.getElementById("ozhukkam-bar");
