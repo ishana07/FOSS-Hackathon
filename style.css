@@ -1364,3 +1364,35 @@ body::after {
         transform: translateY(-45px) scale(1.05);
     }
 }
+.rank-badge {
+    display: inline-block;
+    margin: 12px 0 18px;
+    padding: 10px 20px;
+
+    border: 1px solid rgba(246, 197, 77, 0.5);
+    border-radius: 30px;
+
+    background: rgba(246, 197, 77, 0.08);
+
+    color: #f6c54d;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 0 20px rgba(246, 197, 77, 0.12);
+
+    animation: rankAppear 0.6s ease-out;
+}
+
+@keyframes rankAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

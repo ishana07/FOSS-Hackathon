@@ -184,6 +184,9 @@ const finalScore =
 const resultMessage =
     document.getElementById("result-message");
 
+const rankBadge =
+    document.getElementById("rank-badge");
+
 const scenarioNumber =
     document.getElementById("scenario-number");
 
@@ -411,24 +414,28 @@ function finishGame() {
 
     if (score >= 450) {
 
-        resultMessage.textContent =
-            "🌟 Amazing! Your choices show that you truly understand the spirit of Thirukkural 131.";
+    rankBadge.textContent =
+        "🏆 OZHUKKAM MASTER";
 
-    }
+    resultMessage.textContent =
+        "Your choices show excellent character!";
 
-    else if (score >= 300) {
+} else if (score >= 300) {
 
-        resultMessage.textContent =
-            "👏 Well done! You made many choices that showed good conduct.";
+    rankBadge.textContent =
+        "🌟 GOOD CONDUCT HERO";
 
-    }
+    resultMessage.textContent =
+        "You're learning to make thoughtful choices.";
 
-    else {
+} else {
 
-        resultMessage.textContent =
-            "🌱 Every choice is a chance to learn. Remember: good conduct makes us truly great.";
+    rankBadge.textContent =
+        "🌱 OZHUKKAM EXPLORER";
 
-    }
+    resultMessage.textContent =
+        "Every choice is a chance to learn.";
+}
 
 }
 
