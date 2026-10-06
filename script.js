@@ -172,6 +172,9 @@ const restartButton =
 const choicesContainer =
     document.getElementById("choices-container");
 
+const nextButton =
+    document.getElementById("next-btn");
+
 const scoreDisplay =
     document.getElementById("score");
 
@@ -320,23 +323,32 @@ function selectChoice(choice, selectedButton) {
     // Show feedback
     showFeedback(choice.feedback);
 
-    // Move to next question after 1 second
-    setTimeout(() => {
+    /* Show NEXT CHALLENGE button */
 
-        currentScenario++;
-
-        if (currentScenario < scenarios.length) {
-
-            loadScenario();
-
-        } else {
-
-            finishGame();
-
-        }
-
-    }, 1000);
+nextButton.hidden = false;
 }
+
+/* =========================================
+   NEXT CHALLENGE BUTTON
+========================================= */
+
+nextButton.addEventListener("click", () => {
+
+    nextButton.hidden = true;
+
+    currentScenario++;
+
+    if (currentScenario < scenarios.length) {
+
+        loadScenario();
+
+    } else {
+
+        finishGame();
+
+    }
+
+});
 
 
 /* =========================================

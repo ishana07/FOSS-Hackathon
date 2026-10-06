@@ -1255,3 +1255,52 @@ body::after {
 
     }
 }
+/* =========================================
+   NEXT CHALLENGE BUTTON
+========================================= */
+
+.next-btn {
+    margin: 22px auto 0;
+    display: block;
+
+    padding: 14px 26px;
+
+    border: 1px solid rgba(246, 197, 77, 0.45);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(246, 197, 77, 0.18),
+            rgba(246, 197, 77, 0.08)
+        );
+
+    color: #f6c54d;
+
+    box-shadow:
+        0 8px 25px rgba(246, 197, 77, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.next-btn:hover {
+
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(246, 197, 77, 0.30),
+            rgba(246, 197, 77, 0.12)
+        );
+
+    box-shadow:
+        0 12px 35px rgba(246, 197, 77, 0.25);
+}
+
+.next-btn:active {
+
+    transform: translateY(0);
+}
