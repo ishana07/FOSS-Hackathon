@@ -1,0 +1,1257 @@
+/* =========================================
+   THIRUKKURAL 131 — THE CHOICE QUEST
+   VISUAL DESIGN
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    color: #f7f2e8;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(104, 74, 160, 0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(27, 164, 180, 0.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #080b18,
+            #11152a 50%,
+            #080b18
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND DECORATION
+========================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 350px;
+    height: 350px;
+
+    top: -150px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(247, 194, 71, 0.08);
+
+    filter: blur(70px);
+
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    bottom: -120px;
+    left: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(88, 73, 180, 0.12);
+
+    filter: blur(70px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.game-header {
+
+    width: 100%;
+
+    padding: 22px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(7, 10, 25, 0.72);
+
+    backdrop-filter: blur(14px);
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* BRAND */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+.brand-icon {
+
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f6c54d,
+            #d89627
+        );
+
+    color: #111;
+
+    font-size: 25px;
+
+    box-shadow:
+        0 0 25px rgba(246, 197, 77, 0.2);
+}
+
+.brand h1 {
+
+    font-size: 17px;
+
+    letter-spacing: 2px;
+
+    color: #f6c54d;
+}
+
+.brand p {
+
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: #8d94aa;
+}
+
+
+/* =========================================
+   SCORE
+========================================= */
+
+.score-board {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 9px 15px;
+
+    border: 1px solid rgba(246, 197, 77, 0.25);
+
+    border-radius: 30px;
+
+    background: rgba(246, 197, 77, 0.07);
+}
+
+.score-board span {
+    font-size: 18px;
+}
+
+.score-board strong {
+
+    font-size: 18px;
+
+    color: #f6c54d;
+}
+
+.score-board small {
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color: #a8adbc;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.game-container {
+
+    width: min(1100px, 90%);
+
+    min-height: calc(100vh - 94px);
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================
+   SCREEN
+========================================= */
+
+.screen {
+
+    width: 100%;
+
+    padding: 70px 0;
+
+    display: none;
+
+    animation: screenEnter 0.6s ease;
+}
+
+.screen.active {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+@keyframes screenEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   INTRO SCREEN
+========================================= */
+
+#intro-screen {
+
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+/* CHARACTER */
+
+.hero-character {
+
+    width: 110px;
+    height: 110px;
+
+    margin: 0 auto 25px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 35px;
+
+    font-size: 60px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(93, 74, 170, 0.35),
+            rgba(25, 169, 182, 0.15)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 0 50px rgba(90, 75, 190, 0.25);
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* QUEST LABEL */
+
+.quest-label {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #52d5d7;
+}
+
+
+/* MAIN TITLE */
+
+.intro-content h2 {
+
+    font-size: clamp(48px, 8vw, 86px);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+}
+
+.intro-content h2 span {
+
+    color: #f6c54d;
+
+    text-shadow:
+        0 0 30px rgba(246, 197, 77, 0.25);
+}
+
+
+.intro-content > p {
+
+    max-width: 540px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    color: #aeb4c5;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   KURAL CARD
+========================================= */
+
+.kural-card {
+
+    max-width: 700px;
+
+    margin: 35px auto;
+
+    padding: 32px;
+
+    position: relative;
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(246, 197, 77, 0.25);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(246, 197, 77, 0.09),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+
+    overflow: hidden;
+}
+
+.kural-card::before {
+
+    content: "❖";
+
+    position: absolute;
+
+    top: 14px;
+    left: 18px;
+
+    color: rgba(246, 197, 77, 0.35);
+
+    font-size: 15px;
+}
+
+.kural-card::after {
+
+    content: "❖";
+
+    position: absolute;
+
+    bottom: 14px;
+    right: 18px;
+
+    color: rgba(246, 197, 77, 0.35);
+
+    font-size: 15px;
+}
+
+
+.kural-number {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 6px 13px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: #111;
+
+    background: #f6c54d;
+}
+
+
+.kural-text {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(19px, 3vw, 26px);
+
+    line-height: 1.7;
+
+    color: #fff6df;
+}
+
+
+.kural-meaning {
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #aeb4c5;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.primary-btn {
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #10121c;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8d266,
+            #e7a92f
+        );
+
+    box-shadow:
+        0 10px 30px rgba(246, 197, 77, 0.2);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.primary-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 40px rgba(246, 197, 77, 0.35);
+}
+
+.primary-btn:active {
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   QUEST SCREEN
+========================================= */
+
+#quest-screen {
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+/* TOP */
+
+.quest-top {
+
+    width: 100%;
+
+    margin-bottom: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+#scenario-number {
+
+    white-space: nowrap;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #52d5d7;
+}
+
+
+/* PROGRESS */
+
+.progress-track {
+
+    flex: 1;
+
+    height: 6px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+#progress-bar {
+
+    width: 20%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #52d5d7,
+            #f6c54d
+        );
+
+    transition: width 0.5s ease;
+}
+
+
+/* SCENARIO */
+
+.scenario-card {
+
+    width: 100%;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+
+.scenario-icon {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+
+.scenario-category {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #52d5d7;
+}
+
+
+.scenario-card h2 {
+
+    margin: 12px 0;
+
+    font-size: 30px;
+}
+
+
+.scenario-card p {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    color: #aeb4c5;
+}
+
+
+/* =========================================
+   CHOICES
+========================================= */
+
+.choice-area {
+
+    width: 100%;
+
+    margin-top: 30px;
+}
+
+
+.choice-question {
+
+    margin-bottom: 15px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #858ca1;
+}
+
+
+#choices-container {
+
+    display: grid;
+
+    gap: 12px;
+}
+
+
+.choice-btn {
+
+    width: 100%;
+
+    padding: 18px 20px;
+
+    text-align: left;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: #f5f5f5;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.choice-btn:hover {
+
+    transform: translateX(6px);
+
+    border-color: rgba(82, 213, 215, 0.5);
+
+    background: rgba(82, 213, 215, 0.07);
+}
+
+
+/* =========================================
+   RESULT SCREEN
+========================================= */
+
+#result-screen {
+
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+.result-icon {
+
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    animation: trophyFloat 2s ease-in-out infinite;
+}
+
+
+@keyframes trophyFloat {
+
+    0%,
+    100% {
+        transform: rotate(-3deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(3deg) translateY(-8px);
+    }
+}
+
+
+#result-screen h2 {
+
+    font-size: 48px;
+
+    line-height: 1.1;
+
+    margin-bottom: 30px;
+}
+
+
+#result-screen h2 span {
+
+    color: #f6c54d;
+}
+
+
+.final-score-card {
+
+    width: 230px;
+
+    margin: 0 auto 25px;
+
+    padding: 25px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(246, 197, 77, 0.12),
+            rgba(255, 255, 255, 0.03)
+        );
+
+    border: 1px solid rgba(246, 197, 77, 0.25);
+}
+
+
+.final-score-card p {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #aeb4c5;
+}
+
+
+.final-score-card strong {
+
+    display: inline-block;
+
+    margin-top: 8px;
+
+    font-size: 55px;
+
+    color: #f6c54d;
+}
+
+
+.final-score-card span {
+
+    font-size: 12px;
+
+    color: #52d5d7;
+}
+
+
+#result-message {
+
+    max-width: 480px;
+
+    margin: 0 auto 30px;
+
+    line-height: 1.7;
+
+    color: #aeb4c5;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .game-header {
+
+        padding: 16px 5%;
+    }
+
+    .brand h1 {
+
+        font-size: 14px;
+    }
+
+    .brand-icon {
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 20px;
+    }
+
+    .game-container {
+
+        width: 90%;
+    }
+
+    .screen {
+
+        padding: 45px 0;
+    }
+
+    .intro-content h2 {
+
+        font-size: 52px;
+    }
+
+    .kural-card {
+
+        padding: 25px 18px;
+    }
+
+    .scenario-card {
+
+        padding: 28px 20px;
+    }
+
+    #result-screen h2 {
+
+        font-size: 38px;
+    }
+}
+/* =========================================
+   CHOICE FEEDBACK
+========================================= */
+
+.feedback-message {
+
+    margin-top: 16px;
+
+    padding: 15px 18px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(82, 213, 215, 0.25);
+
+    background: rgba(82, 213, 215, 0.07);
+
+    color: #bdeff0;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    animation: feedbackEnter 0.4s ease;
+}
+
+
+@keyframes feedbackEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+/* =========================================
+   CHOICE RESULT STATES
+========================================= */
+
+.choice-btn.choice-good {
+
+    border-color: rgba(76, 220, 150, 0.8);
+
+    background:
+        rgba(76, 220, 150, 0.12);
+
+    box-shadow:
+        0 0 25px rgba(76, 220, 150, 0.12);
+
+    animation: choiceSuccess 0.45s ease;
+}
+
+
+.choice-btn.choice-learning {
+
+    border-color: rgba(246, 176, 66, 0.7);
+
+    background:
+        rgba(246, 176, 66, 0.1);
+
+    animation: choiceLearning 0.45s ease;
+}
+
+
+@keyframes choiceSuccess {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.025);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes choiceLearning {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+
+    75% {
+        transform: translateX(-2px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================
+   XP POPUP
+========================================= */
+
+.xp-popup {
+
+    position: fixed;
+
+    top: 105px;
+    right: 8%;
+
+    z-index: 100;
+
+    padding: 9px 16px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #10121c;
+
+    background: #f6c54d;
+
+    box-shadow:
+        0 8px 30px rgba(246, 197, 77, 0.3);
+
+    animation: xpFloat 1s ease forwards;
+}
+
+
+@keyframes xpFloat {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(0.8);
+
+    }
+
+    20% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+    70% {
+
+        opacity: 1;
+
+        transform:
+            translateY(-15px)
+            scale(1);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translateY(-35px)
+            scale(0.9);
+
+    }
+}
+/* =========================================
+   CHOICE RESULT STATES
+========================================= */
+
+.choice-btn.choice-good {
+
+    border-color: rgba(76, 220, 150, 0.8);
+
+    background:
+        rgba(76, 220, 150, 0.12);
+
+    box-shadow:
+        0 0 25px rgba(76, 220, 150, 0.12);
+
+    animation: choiceSuccess 0.45s ease;
+}
+
+
+.choice-btn.choice-learning {
+
+    border-color: rgba(246, 176, 66, 0.7);
+
+    background:
+        rgba(246, 176, 66, 0.1);
+
+    animation: choiceLearning 0.45s ease;
+}
+
+
+@keyframes choiceSuccess {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.025);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes choiceLearning {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+
+    75% {
+        transform: translateX(-2px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================
+   XP POPUP
+========================================= */
+
+.xp-popup {
+
+    position: fixed;
+
+    top: 105px;
+    right: 8%;
+
+    z-index: 100;
+
+    padding: 9px 16px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #10121c;
+
+    background: #f6c54d;
+
+    box-shadow:
+        0 8px 30px rgba(246, 197, 77, 0.3);
+
+    animation: xpFloat 1s ease forwards;
+}
+
+
+@keyframes xpFloat {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(0.8);
+
+    }
+
+    20% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+    70% {
+
+        opacity: 1;
+
+        transform:
+            translateY(-15px)
+            scale(1);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translateY(-35px)
+            scale(0.9);
+
+    }
+}
