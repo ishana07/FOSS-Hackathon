@@ -1436,3 +1436,70 @@ body::after {
     font-size: 0.9rem;
     line-height: 1.6;
 }
+
+.quest-path {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 18px auto 26px;
+    max-width: 520px;
+}
+
+.quest-node {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid rgba(200, 200, 216, 0.25);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: #8f91a8;
+    font-size: 0.85rem;
+    font-weight: 800;
+
+    transition: 0.3s ease;
+}
+
+.quest-node.active {
+    border-color: #f6c54d;
+    background: rgba(246, 197, 77, 0.15);
+    color: #f6c54d;
+
+    box-shadow:
+        0 0 15px rgba(246, 197, 77, 0.35);
+}
+
+.quest-node.completed {
+    border-color: #52d5d7;
+    background: rgba(82, 213, 215, 0.12);
+    color: #52d5d7;
+
+    box-shadow:
+        0 0 12px rgba(82, 213, 215, 0.25);
+}
+
+.quest-node.completed::after {
+    content: "✓";
+    font-size: 0.8rem;
+}
+
+.quest-node.completed {
+    font-size: 0;
+}
+
+.quest-line {
+    width: 55px;
+    height: 2px;
+    background: rgba(200, 200, 216, 0.2);
+}
+
+.quest-line.completed {
+    background: #52d5d7;
+    box-shadow: 0 0 8px rgba(82, 213, 215, 0.3);
+}

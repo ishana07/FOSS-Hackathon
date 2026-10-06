@@ -175,6 +175,12 @@ const choicesContainer =
 const nextButton =
     document.getElementById("next-btn");
 
+const questNodes =
+    document.querySelectorAll(".quest-node");
+
+const questLines =
+    document.querySelectorAll(".quest-line");
+
 const scoreDisplay =
     document.getElementById("score");
 
@@ -234,6 +240,27 @@ function startGame() {
 ========================================= */
 
 function loadScenario() {
+
+    questNodes.forEach((node, index) => {
+
+    node.classList.remove("active", "completed");
+
+    if (index < currentScenario) {
+        node.classList.add("completed");
+    }
+
+    if (index === currentScenario) {
+        node.classList.add("active");
+    }
+
+    if (questLines[index]) {
+        questLines[index].classList.toggle(
+            "completed",
+            index < currentScenario
+        );
+    }
+
+});
 
     const scenario = scenarios[currentScenario];
 
